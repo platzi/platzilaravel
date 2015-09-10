@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: PlatziPHP
+        psr4_prefix: PlatziPHP
+        src_path: app
