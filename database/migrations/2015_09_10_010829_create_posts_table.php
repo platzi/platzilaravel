@@ -15,7 +15,8 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function($table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title');
+            $table->text('body');
             $table->integer('author_id');
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists();
+        Schema::dropIfExists('posts');
     }
 }
