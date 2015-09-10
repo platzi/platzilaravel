@@ -2,15 +2,18 @@
 
 @section('content')
     <h1>Estos son nuestos posts</h1>
-
-    <ul>
+    <hr>
+    <ul class="list-unstyled">
     @foreach($posts as $post)
         <li>
-            <a href="{{ route('post_show_path', $post->id) }}">
-                {{ $post->title }}
-            </a>
-            -
-            {{ $post->author->name  }}
+            <p class="lead">
+                <a href="{{ route('post_show_path', $post->id) }}">
+                    {{ $post->title }}
+                </a>
+            </p>
+            <br>
+            creado: {{ $post->created_at }}
+            <hr>
         </li>
     @endforeach
     </ul>
