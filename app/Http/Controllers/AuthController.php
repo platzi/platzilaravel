@@ -44,7 +44,7 @@ class AuthController extends Controller
             return redirect()->route('auth_show_path')->withErrors('No encontramos al usuario.');
         }
 
-        return 'Listo';
+        return redirect()->intended('/');
     }
 
     /**

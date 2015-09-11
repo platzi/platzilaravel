@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Estos son nuestos posts</h1>
+    <a class="btn btn-primary" href="{{ route('post_create_path') }}">Crear Post</a>
     <hr>
     <ul class="list-unstyled">
     @foreach($posts as $post)

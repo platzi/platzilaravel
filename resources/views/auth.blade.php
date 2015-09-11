@@ -2,16 +2,7 @@
 
 @section('content')
     <h1>Iniciar Sesión</h1>
-    @if($errors->has())
-        <div class="alert alert-danger">
-            <ul class="list-unstyled">
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-            </ul>
-        </div>
-    @endif
-
+    @include('partials.errors')
     <form action="{{ route('auth_store_path') }}" method="post">
         {{ csrf_field() }}
         <label for="email">Email:</label>
